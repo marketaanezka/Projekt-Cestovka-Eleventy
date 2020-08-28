@@ -1,0 +1,39 @@
+{% include "partials/top.njk" %}
+
+	<div class="stranka u-my4">
+
+		<!-- levý sloupec s hlavním obsahem stránky -->
+		<section class="stranka__obsah">
+			
+			<h1>{{ titulek }}</h1>
+			{{content | safe }}
+		</section>
+		<!-- konec levého sloupce-->
+
+		<!-- pravý sloupec -->
+		<section class="stranka__sidebar">
+
+			<h2>Last minute zájezdy</h2>
+
+			<div class="dlazdice-grid dlazdice-grid--sloupec">
+
+				{% for zajezd in collections.lastminute %}
+					<a href="#" class="dlazdice">
+						<img class="dlazdice__foto" src="/images/{{zajezd.data.img}}.jpg" alt="{{img}}">
+						<div class="dlazdice__cena">
+							{{zajezd.data.cena}}
+						</div>
+						<div class="dlazdice__text">
+							<h3 class="dlazdice__nazev dlazdice__nazev--standard">{{zajezd.data.title}}</h3>
+						</div>
+					</a>	
+				{% endfor %} 
+				
+			</div>
+
+		</section>
+		<!-- konec pravého sloupce-->
+	</div>
+</div>
+
+{% include "partials/bottom.njk" %}

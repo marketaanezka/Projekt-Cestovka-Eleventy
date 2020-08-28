@@ -1,0 +1,14 @@
+.paticka {
+	padding: $pad;
+	background-color: $color-dark;
+	text-align: center;
+	color: white;
+
+	:first-child {
+		margin-top: 0;
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}

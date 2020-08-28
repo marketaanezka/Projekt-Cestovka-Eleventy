@@ -1,0 +1,44 @@
+// ***********************************
+// POMOCNÉ TŘÍDY
+// ***********************************
+
+// mixin pro margin nahoře a dole
+// předá se do něho násobek, kterým se vynásobí standardní
+// velikost odsazení $pad
+
+@mixin margin-top($factor) {
+	margin-top: $pad * $factor;
+}
+
+@mixin margin-bottom($factor) {
+	margin-bottom: $pad * $factor;
+}
+
+@mixin margin-y($factor) {
+	@include margin-top($factor);
+	@include margin-bottom($factor);
+}
+
+// margin top
+.u-mt0 { @include margin-top(0) }
+.u-mt1 { @include margin-top(0.25) }
+.u-mt2 { @include margin-top(0.5) }
+.u-mt3 { @include margin-top(1) }
+.u-mt4 { @include margin-top(1.5) }
+.u-mt5 { @include margin-top(2) }
+
+// margin bottom
+.u-mb0 { @include margin-bottom(0) }
+.u-mb1 { @include margin-bottom(0.25) }
+.u-mb2 { @include margin-bottom(0.5) }
+.u-mb3 { @include margin-bottom(1) }
+.u-mb4 { @include margin-bottom(1.5) }
+.u-mb5 { @include margin-bottom(2) }
+
+// margin top a bottom
+.u-my0 { @include margin-y(0) }
+.u-my1 { @include margin-y(0.25) }
+.u-my2 { @include margin-y(0.5) }
+.u-my3 { @include margin-y(1) }
+.u-my4 { @include margin-y(1.5) }
+.u-my5 { @include margin-y(2) }

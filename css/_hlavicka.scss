@@ -1,0 +1,35 @@
+.hlavicka {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// ***********************************
+// LOGO
+// ***********************************
+
+.logo {
+	margin-left: $pad;
+}
+
+// ***********************************
+// MENU
+// ***********************************
+
+.menu {
+	display: flex;
+}
+
+.menu__link {
+	display: block;
+	padding: $pad;
+	color: $color-primary;
+	text-decoration: none;
+	font-family: $font-special;
+	font-size: 18px;
+
+	&:hover {
+		background-color: $color-primary;
+		color: white;
+	}
+}

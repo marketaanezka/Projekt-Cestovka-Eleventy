@@ -1,0 +1,88 @@
+{% include "partials/top.njk" %}
+
+  <section class="dlazdice-grid dlazdice-grid--vlevo u-my5">		
+
+		{% for zajezd in collections.topoffer %}
+			{% if loop.index <= 3 %}    
+			<a href="{{ zajezd.url }}" class="dlazdice">
+				<img class="dlazdice__foto" src="images/{{ zajezd.data.img }}.jpg" alt="{{zajezd.data.img}}" />
+				<div class="dlazdice__cena">{{zajezd.data.cena}}</div>haf
+				<div class="dlazdice__text">
+					<h3 class="dlazdice__nazev">{{zajezd.data.title}}</h3>
+					{% if loop.index <= 1 %} 
+						<p class="dlazdice__popis">
+							{{zajezd.data.subtitle}}
+						</p>
+					{% endif %}
+				</div>
+			</a>	
+			{% endif %}
+		{% endfor %} 
+
+  </section>
+
+  <section class="vyhody u-my5">
+
+			{% for vyhoda in vyhody %}
+					<div class="vyhoda">
+						<img
+							class="vyhoda__ikona"
+							src="images/{{vyhoda.ikona}}.svg"
+							alt="ikona"
+							width="40"
+							height="40"
+						/>
+						<h3 class="vyhoda__nazev"> {{vyhoda.titulek}}</h3>
+						<p class="vyhoda__popis">
+							{{ vyhoda.subtitle }}
+						</p>
+					</div>
+					{% endfor %}
+
+  </section>
+
+  <section class="last-minute u-my5">
+    <h2>Last minute zájezdy</h2>
+
+    <div class="dlazdice-grid dlazdice-grid--vpravo">
+
+	  	{% for zajezd in collections.lastminute %}
+				{% if loop.index <= 3 %}    
+				<a href="{{ zajezd.url }}" class="dlazdice">
+					<img class="dlazdice__foto" src="images/{{ zajezd.data.img }}.jpg" alt="{{zajezd.data.img}}" />
+					<div class="dlazdice__cena">{{zajezd.data.cena}}</div>haf
+					<div class="dlazdice__text">
+						<h3 class="dlazdice__nazev">{{zajezd.data.title}}</h3>
+						{% if loop.index <= 1 %} 
+							<p class="dlazdice__popis">
+								{{zajezd.data.subtitle}}
+							</p>
+						{% endif %}
+					</div>
+				</a>	
+				{% endif %}
+			{% endfor %} 
+			
+		</div>
+  </section>
+		
+  <section class="novinky u-my5">
+    <h2>Novinky</h2>
+
+    <div class="novinky__obsah">
+				
+			{% for novinka in collections.novinky %}
+				<a class="novinka" href="{{novinka.url}}">
+						<p class="novinka__datum">{{ novinka.data.datum}}</p>
+						<h3 class="novinka__nazev">{{ novinka.data.titulek }}</h3>
+						<p class="novinka__text">
+							{{ novinka.data.subtitle }}
+						</p>
+				</a>
+			{% endfor %}
+		</div>
+  </section>
+
+</div>
+
+{% include "partials/bottom.njk" %}

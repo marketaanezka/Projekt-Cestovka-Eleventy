@@ -1,0 +1,71 @@
+{% include "partials/top.njk" %}
+
+	<article class="zajezd">
+		<!-- levý sloupec s obrázkem a popisem-->
+		<div class="zajezd__text">
+
+			<header class="zajezd__hlavicka">
+				<div class="zajezd__main">
+					<img class="zajezd__foto" src="/images/{{ img }}.jpg" alt="{{ img }}">
+				</div>
+				<div class="zajezd__titulek">
+					<h1 class="zajezd__nazev">{{ title }}</h1>
+					<p class="zajezd__perex">{{ subtitle }}</p>
+				</div>
+			</header>
+
+			<section class="zajezd__popis u-my5">
+				<h2>{{ title }}</h2>
+
+				{{ content | safe }}
+
+			</section>
+
+		</div>
+		<!-- konec levého sloupce-->
+
+		<!-- pravý sloupec s podrobnostmi o zájezdu-->
+		<div class="zajezd__informace">
+
+			<div class="zajezd__info">
+				<p class="zajezd__info-popis">Termín</p>
+				<p class="zajezd__info-text">
+					{{ termin | safe }}
+				</p>
+			</div>
+
+			<div class="zajezd__info">
+				<p class="zajezd__info-popis">Hotel</p>
+				<p class="zajezd__info-text">
+					{{ hotel | safe }}
+				</p>
+			</div>
+
+			<div class="zajezd__info">
+				<p class="zajezd__info-popis">Počet osob</p>
+				<p class="zajezd__info-text">
+					{{ osoby }}
+				</p>
+			</div>
+
+			<div class="zajezd__info">
+				<p class="zajezd__info-popis">Strava</p>
+				<p class="zajezd__info-text">
+					{{strava}}
+				</p>
+			</div>
+
+			<div class="zajezd__info zajezd__info--price">
+				<p class="zajezd__info-popis">Cena</p>
+				<p class="zajezd__info-text">
+					{{cena}}
+				</p>
+			</div>
+
+
+		</div>
+		<!-- konec pravého sloupce-->
+	</article>
+ </div>
+
+{% include "partials/bottom.njk" %}

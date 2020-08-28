@@ -1,0 +1,27 @@
+// ***********************************
+// BĚŽNÁ TEXTOVÁ STRÁNKA
+// ***********************************
+
+.stranka {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: $pad;
+
+	padding-top: $pad * 2;
+	border-top: 2px solid $color-primary;
+
+	& :first-child {
+		margin-top: 0;
+	}
+
+	h1 {
+		color: $color-primary;
+		font-size: 36px;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		margin: ($pad * 2) 0;
+	}
+}

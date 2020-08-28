@@ -1,0 +1,35 @@
+// ***********************************
+// VÝHODY
+// ***********************************
+
+.vyhody {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: $pad;
+}
+
+.vyhoda {
+	padding: $pad;
+	background-color: $color-light;
+}
+
+.vyhoda__ikona {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto $pad auto;
+}
+
+.vyhoda__nazev {
+	font-family: $font-special;
+	font-weight: normal;
+	font-size: 18px;
+	color: $color-primary;
+	margin: ($pad / 2) 0;
+	text-align: center;
+}
+
+.vyhoda__popis {
+	margin: ($pad / 2) 0;
+	text-align: center;
+}
